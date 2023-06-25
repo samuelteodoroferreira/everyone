@@ -7,18 +7,18 @@
     <link href="/styles/style.css" rel="stylesheet">
     <link href="/styles/fonts.css" rel="stylesheet">
     <link href="/styles/media.css" rel="stylesheet">
-    <title>Landing Page</title>
+    <title>EveryOne</title>
 </head>
 <body>
     <header>
         <div id="title">
-            <h1>Marketing</h1>
-            <h1>Criativo</h1>
+            <h1>Diversidade</h1>
+            <h1>& inclusão</h1>
         </div>
 
         <ul>
             <a href="#"><li>Início</li></a>
-            <a href="#"><li>Serviços</li></a>
+            <a href="#"><li button onclick="toggleDiv()">Serviços</li></a>
             <a href="#"><li>Sobre</li></a>
             <a href="#"><li>Contato</li></a>
             <a href="#" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
@@ -27,10 +27,10 @@
 
     <main>
         <aside>
-            <h2><span>Inscreva-se agora</span></h2>
-            <h2>na Newslatter</h2>
+            <h2><span>EveryOne</span></h2>
+            <h3>Todos Somos um</h3>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                Somos um Startup foca em levar seu time em outro nivel. Possuimos como principal objetivo implementar diversidade, empoderamento e bem estar para seus profissionais.
             </p>
             <form>
                 <input type="text" placeholder="Nome">
@@ -43,6 +43,24 @@
             <img src="./components/images/77d0a7c454e658833800528e748edbe9.png" alt="mulher-roxa">
         </article>
     </main>
+    <div id="Serviços" class="hidden">
+
+    </div>
+
+    <div id="Sobre" class="hidden">
+
+    </div>
+
+    <div id="Contato" class="hidden"></div>
+
+
+    <script>
+        function toggleDiv() {
+          var div = document.getElementById("Serviços");
+          div.classList.toggle("hidden");
+          div.classList.toggle("show");
+        }
+      </script>
     
 </body>
 </html>

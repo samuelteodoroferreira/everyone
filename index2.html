@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibir Div com Botão</title>
+  <style>
+    /* Estilos CSS */
+    .hidden {
+      display: none;
+    }
+    
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button onclick="toggleDiv()">Mostrar Div</button>
+  </div>
+  
+  <div id="myDiv" class="hidden">
+    <h2>Div que será exibida</h2>
+    <p>Conteúdo da div...</p>
+  </div>
+
+  <script>
+    function toggleDiv() {
+      var div = document.getElementById("myDiv");
+      div.classList.toggle("hidden");
+      div.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
