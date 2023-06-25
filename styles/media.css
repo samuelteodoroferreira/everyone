@@ -28,4 +28,16 @@
     ul{
         text-align: center;
     }
+
+    .Serviços{
+        flex-direction: column;
+    }
+
+    .sobre{
+        flex-direction: column;
+    }
+
+    .Contato{
+        flex-direction: column;
+    }
 }

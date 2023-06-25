@@ -99,3 +99,13 @@ input{
     border: none;
     font-size: 15px;
 }
+
+.hidden {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  
