@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,11 @@
     <link href="/styles/media.css" rel="stylesheet">
     <title>EveryOne</title>
 </head>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
 <body>
     <header>
         <div id="title">
@@ -17,50 +22,65 @@
         </div>
 
         <ul>
-            <a href="#"><li>Início</li></a>
-            <a href="#"><li button onclick="toggleDiv()">Serviços</li></a>
-            <a href="#"><li>Sobre</li></a>
-            <a href="#"><li>Contato</li></a>
+            <a href="#"><li button onclick="toggleDiv('inicio')">Início</li></a>
+            <a href="#"><li button onclick="toggleDiv('servicos')">Serviços</li></a>
+            <a href="#"><li button onclick="toggleDiv('sobre')">Sobre</li></a>
+            <a href="#"><li button onclick="toggleDiv('contato')">Contato</li></a>
             <a href="#" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
         </ul>
     </header>
 
-    <main>
-        <aside>
-            <h2><span>EveryOne</span></h2>
-            <h3>Todos Somos um</h3>
+    <div id="inicio" class="show">
+        <main>
+            <aside>
+                <h2><span>...........................................</span></h2>
+                <h3>Ajudamos a construir organizações mais inclusivas com ambientes de trabalhos seguros e respeitosos.</h3>
+                <p>
+                    Somos uma Startup focada em levar seu time para outro nivel. Possuimos como principal objetivo implementar diversidade, empoderamento e bem estar para seus colaboradores.
+                </p>
+                <P>
+                    Pois Pessoas felizes, proporcionam ambientes felizes.
+                </P>
+            </br>
             <p>
-                Somos um Startup foca em levar seu time em outro nivel. Possuimos como principal objetivo implementar diversidade, empoderamento e bem estar para seus profissionais.
+                FALE CONTACTE-NOS:
             </p>
-            <form>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <input type="submit" value="Enviar >">
-            </form>
-        </aside>
+                <form>
+                    <input type="text" placeholder="Nome">
+                    <input type="email" placeholder="E-mail">
+                    <input type="submit" value="Enviar >">
+                </form>
+            </aside>
 
-        <article>
-            <img src="./components/images/77d0a7c454e658833800528e748edbe9.png" alt="mulher-roxa">
-        </article>
-    </main>
-    <div id="Serviços" class="hidden">
-
+            <article>
+                <img src="./components/images/EveryOne.png" alt="mulher-roxa">
+            </article>
+        </main>
+    </div>
+    
+    <div id="servicos" class="hidden">
+        Texto Serviços
     </div>
 
-    <div id="Sobre" class="hidden">
-
+    <div id="sobre" class="hidden">
+        Texto Sobre
     </div>
 
-    <div id="Contato" class="hidden"></div>
+    <div id="contato" class="hidden">
+        Texto Contato
+    </div>
 
 
     <script>
-        function toggleDiv() {
-          var div = document.getElementById("Serviços");
-          div.classList.toggle("hidden");
-          div.classList.toggle("show");
+        function toggleDiv(nome) {
+            var div = document.getElementById(nome);
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("sobre").style.display = "none";
+            document.getElementById("servicos").style.display = "none";
+            document.getElementById("contato").style.display = "none";
+            div.style.display = "block";
         }
-      </script>
+    </script>
     
 </body>
 </html>
